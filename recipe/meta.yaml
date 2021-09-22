@@ -1,5 +1,5 @@
 {% set name = "radiant-mlhub" %}
-{% set version = "0.2.2" %}
+{% set version = "0.3.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/radiant_mlhub-{{ version }}.tar.gz
-  sha256: 0d9f634b7e29c7f7294b81a10cf712ac63251949a9c5a07aa6c64c0d5b77e1ba
+  sha256: dd66479f12317e7bf366abe8d692841485e9497918c30ab14cd6db9e69ce3dbb
 
 build:
   number: 0
@@ -20,14 +20,15 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python >=3.7
     - setuptools
   run:
-    - click ~=7.1.2
-    - pystac ==0.5.4
+    - click >=7.1.2,<9.0.0
+    - pystac ~=1.1.0
     - python >=3.6
-    - requests ~=2.25.1
-    - tqdm ~=4.56.0
+    - requests ~=2.25
+    - tqdm ~=4.56
+    - typing-extensions
 
 test:
   imports:
