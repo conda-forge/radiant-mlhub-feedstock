@@ -20,14 +20,15 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python >=3.7
     - setuptools
   run:
-    - click ~=7.1.2
-    - pystac ==0.5.4
+    - click >=7.1.2,<9.0.0
+    - pystac ~=1.1.0
     - python >=3.6
-    - requests ~=2.25.1
-    - tqdm ~=4.56.0
+    - requests ~=2.25
+    - tqdm ~=4.56
+    - typing-extensions
 
 test:
   imports:
