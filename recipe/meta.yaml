@@ -1,5 +1,5 @@
 {% set name = "radiant-mlhub" %}
-{% set version = "0.3.1" %}
+{% set version = "0.4.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/radiant_mlhub-{{ version }}.tar.gz
-  sha256: 3a5a8e971132d5b4cd9e412c7f6d87894fc588655ae0e93006646927b1ecb902
+  sha256: 0208881601216f895a1c084a3ca9e5c46b09dbc09dca0447540192e4abb847b1
 
 build:
   number: 0
