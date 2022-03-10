@@ -120,5 +120,5 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@duckontheweb](https://github.com/duckontheweb/)
+* [@guidorice](https://github.com/guidorice/)
 
