@@ -121,4 +121,4 @@ Feedstock Maintainers
 =====================
 
 * [@guidorice](https://github.com/guidorice/)
-* [@duckontheweb](https://github.com/duckontheweb/)
+
