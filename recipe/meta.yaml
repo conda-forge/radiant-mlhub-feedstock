@@ -1,6 +1,5 @@
 {% set name = "radiant-mlhub" %}
 {% set version = "0.4.1" %}
-{% set expect_hash_for_version = "1d95475ec9d4cf460d5201425ba843523b1885a9384b9c1adb81a4a1088adb0f" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/radiant_mlhub-{{ version }}.tar.gz
-  sha256: {{ expect_hash_for_version }}
+  sha256: 1d95475ec9d4cf460d5201425ba843523b1885a9384b9c1adb81a4a1088adb0f
 
 build:
   number: 0
@@ -28,8 +27,7 @@ requirements:
     - python >=3.7
     - requests ~=2.25
     - tqdm ~=4.56
-    # TODO: does this conditional syntax work with conda recipes?
-    - 'typing_extensions >= 3.7; python_version < "3.8"'
+    - typing_extensions
 
 test:
   imports:
