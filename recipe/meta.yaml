@@ -1,5 +1,5 @@
 {% set name = "radiant-mlhub" %}
-{% set version = "0.5.1" %}
+{% set version = "0.5.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/radiant_mlhub-{{ version }}.tar.gz
-  sha256: b7daff4a127e96e27c64eda66e393d9727e61a87c887f86738753486cc44fa46
+  sha256: d310afce962508a44c60f5738fef164c50e78f76c3e85813653824b39a189ca3
 
 build:
   number: 0
@@ -24,12 +24,12 @@ requirements:
   run:
     - python >=3.8
     - click >=7.1.2,<9.0.0
-    - pydantic ~=1.9
-    - pystac ~=1.4
-    - python-dateutil ~=2.8
-    - requests ~=2.27
-    - shapely ~=1.8
-    - tqdm ~=4.64
+    - pydantic ~=1.9.2
+    - pystac ~=1.4.0
+    - python-dateutil ~=2.8.2
+    - requests ~=2.27.0
+    - shapely ~=1.8.0
+    - tqdm ~=4.64.0
 
 test:
   imports:
@@ -52,3 +52,4 @@ about:
 extra:
   recipe-maintainers:
     - guidorice
+    - mirob9363
