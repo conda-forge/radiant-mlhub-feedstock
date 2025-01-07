@@ -6,23 +6,23 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/radiant_mlhub-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/radiant_mlhub-{{ version }}.tar.gz
   sha256: 93cabc3c8e9ba343cdb3b0bfaec01bf7a36aae75704fabfe96c8bf5cab9fa899
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - mlhub=radiant_mlhub.cli:mlhub
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python {{ python_min }}
     - setuptools
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - click >=7.1.2,<9.0.0
     - pydantic ~=1.9.2
     - pystac ~=1.4.0
@@ -41,6 +41,7 @@ test:
     - mlhub --version
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/radiantearth/radiant-mlhub
